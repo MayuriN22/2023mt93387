@@ -12,7 +12,7 @@ pipeline {
         stage('Build and Compile') {
             steps {
                 // Build your project (e.g., with Maven, Gradle, etc.)
-                sh 'mvn clean compile'
+                sh 'mvn clean install'
             }
         }
         
