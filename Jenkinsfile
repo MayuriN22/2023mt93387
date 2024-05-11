@@ -7,7 +7,7 @@ pipeline {
  // Checkout code from Git repository
  checkout([$class: 'GitSCM',
  branches: [[name: '*/master']], name
- userRemoteConfigs: [[url: 'https://github.com/MayuriN22/2023mt93387.git']]]) 
+ userRemoteConfigs: [[url: 'https://github.com/MayuriN22/2023mt93387.git']]) 
  }
  }
  
