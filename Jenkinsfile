@@ -15,6 +15,19 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
+        stage('Run Application') {
+            steps {
+                script {
+                    if (isUnix()) {
+                        // Unix-specific commands
+                        sh 'nohup java -jar BuildMayuri_Assignment.jar &'
+                    } else {
+                        // Windows-specific commands
+                        bat 'start java -jar BuildMayuri_Assignment.jar'
+                    }
+                }
+            }
+        }
         
         
     }
